@@ -95,7 +95,11 @@ namespace Romanos.Teste
         {
             ConversorRomano.Converter(90).Should().Be("XC");
         }
-
+        [TestMethod]
+        public void Faz99()
+        {
+            ConversorRomano.Converter(99).Should().Be("XCIX");
+        }
         
     }
 }
