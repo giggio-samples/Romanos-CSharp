@@ -101,5 +101,36 @@ namespace Romanos.Teste
             ConversorRomano.Converter(99).Should().Be("XCIX");
         }
         
+        [TestMethod]
+        public void Faz101()
+        {
+            ConversorRomano.Converter(101).Should().Be("CI");
+        }
+        [TestMethod]
+        public void Faz109()
+        {
+            ConversorRomano.Converter(109).Should().Be("CIX");
+        }
+        [TestMethod]
+        public void Faz130()
+        {
+            ConversorRomano.Converter(130).Should().Be("CXXX");
+        }
+        [TestMethod, Ignore]
+        public void Faz140()
+        {
+            ConversorRomano.Converter(140).Should().Be("CXL");
+        }
+        [TestMethod, Ignore]
+        public void Faz149()
+        {
+            ConversorRomano.Converter(149).Should().Be("CXLIX");
+        }
+        [TestMethod, Ignore]
+        public void Faz199()
+        {
+            ConversorRomano.Converter(199).Should().Be("CXCIX");
+        }
+        
     }
 }

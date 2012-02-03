@@ -12,15 +12,11 @@ namespace Romanos.Teste
                 romano += "L";
                 n -= 50;
             }
-
+            
             if (n % 50 >= 40 && n % 50 < 50)
             {
-                while (n % 50 >= 40 && n % 50 < 50)
-                {
-                    romano += "L";
-                    n -= 40;
-                }
-
+                romano += "L";
+                n -= 40;
                 romano = "X" + romano;
             }
 
@@ -33,12 +29,8 @@ namespace Romanos.Teste
 
             if (n % 5 == 4)
             {
-                while (n == 4)
-                {
-                    dezena += "V";
-                    n -= 4;
-                }
-
+                dezena += "V";
+                n -= 4;
                 dezena = "I" + dezena;
             }
             romano = romano + dezena;
