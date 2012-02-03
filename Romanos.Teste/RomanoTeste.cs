@@ -86,11 +86,6 @@ namespace Romanos.Teste
             ConversorRomano.Converter(40).Should().Be("XL");
         }
         [TestMethod]
-        public void Faz100()
-        {
-            ConversorRomano.Converter(100).Should().Be("C");
-        }
-        [TestMethod]
         public void Faz90()
         {
             ConversorRomano.Converter(90).Should().Be("XC");
@@ -100,7 +95,11 @@ namespace Romanos.Teste
         {
             ConversorRomano.Converter(99).Should().Be("XCIX");
         }
-        
+        [TestMethod]
+        public void Faz100()
+        {
+            ConversorRomano.Converter(100).Should().Be("C");
+        }
         [TestMethod]
         public void Faz101()
         {
@@ -116,21 +115,25 @@ namespace Romanos.Teste
         {
             ConversorRomano.Converter(130).Should().Be("CXXX");
         }
-        [TestMethod, Ignore]
+        [TestMethod]
         public void Faz140()
         {
             ConversorRomano.Converter(140).Should().Be("CXL");
         }
-        [TestMethod, Ignore]
+        [TestMethod]
         public void Faz149()
         {
             ConversorRomano.Converter(149).Should().Be("CXLIX");
         }
-        [TestMethod, Ignore]
+        [TestMethod]
         public void Faz199()
         {
             ConversorRomano.Converter(199).Should().Be("CXCIX");
         }
-        
+        [TestMethod]
+        public void Faz299()
+        {
+            ConversorRomano.Converter(299).Should().Be("CCXCIX");
+        }
     }
 }
