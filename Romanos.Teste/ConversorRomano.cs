@@ -6,10 +6,16 @@ namespace Romanos.Teste
         {
 
             string romano = "";
-            
-            if (n % 50 == 40)
+
+            while (n >= 50)
             {
-                while (n % 50 == 40)
+                romano += "L";
+                n -= 50;
+            }
+
+            if (n % 50 >= 40 && n % 50 < 50)
+            {
+                while (n % 50 >= 40 && n % 50 < 50)
                 {
                     romano += "L";
                     n -= 40;
@@ -18,9 +24,10 @@ namespace Romanos.Teste
                 romano = "X" + romano;
             }
 
+            var dezena = "";
             while (n >= 5)
             {
-                romano += "V";
+                dezena += "V";
                 n -= 5;
             }
 
@@ -28,13 +35,13 @@ namespace Romanos.Teste
             {
                 while (n == 4)
                 {
-                    romano += "V";
+                    dezena += "V";
                     n -= 4;
                 }
 
-                romano = "I" + romano;
+                dezena = "I" + dezena;
             }
-           
+            romano = romano + dezena;
 
             romano = romano.Replace("VV", "X");
             romano = romano.Replace("XXXXX", "L");
