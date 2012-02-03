@@ -43,6 +43,8 @@ namespace Romanos.Teste
             romano = romano.Replace("VV", "X");
             romano = romano.Replace("XXXXX", "L");
             romano = romano.Replace("LL", "C");
+            romano = romano.Replace("CCCCC", "D");
+            romano = romano.Replace("DD", "M");
 
 
             for (int i = 1; i <= n; i++)
